@@ -1,0 +1,1 @@
+{ "notebook": { "folder": "walmart_project" , "q04_seasonal_decompose": "q04_seasonal_decompose.ipynb", "q05_acf_pacf_plot": "q05_acf_pacf_plot.ipynb", "q01_preprocesssing": "q01_preprocesssing.ipynb", "q02_test_stationarity": "q02_test_stationarity.ipynb", "q03_autocorrelation_plot": "q03_autocorrelation_plot.ipynb"} }
