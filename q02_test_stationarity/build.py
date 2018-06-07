@@ -1,11 +1,12 @@
 import pandas as pd
 import numpy as np
 from  statsmodels.tsa.stattools import adfuller
+from q01_preprocesssing.build import q01_preprocesssing
 
+train_df = pd.read_csv("data/train.csv")
+df = q01_preprocesssing(train_df)
 
 df_mean = df.resample('W').mean()
-df_mean
-
 
 def q02_test_stationarity(x):
     "write your solution here"
@@ -32,5 +33,3 @@ def q02_test_stationarity(x):
     for key, value in tstest[4].items():
         tsoutput['Critical Value (%s)' % key] = value
     print(tsoutput)
-    
-
