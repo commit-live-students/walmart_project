@@ -1,5 +1,8 @@
 import pandas as pd
 import numpy as np
+import sys,os
+sys.path.append(os.path.join(os.path.dirname(os.curdir)))
+import matplotlib.pyplot as plt
 from  statsmodels.tsa.stattools import adfuller
 from q01_preprocesssing.build import q01_preprocesssing
 
@@ -8,7 +11,7 @@ df = q01_preprocesssing(train_df)
 
 df_mean = df.resample('W').mean()
 
-def q02_test_stationarity(x):
+def q02_test_stationarity(x=df_mean):
     "write your solution here"
     
     #Determing rolling statistics
@@ -33,3 +36,6 @@ def q02_test_stationarity(x):
     for key, value in tstest[4].items():
         tsoutput['Critical Value (%s)' % key] = value
     print(tsoutput)
+
+
+

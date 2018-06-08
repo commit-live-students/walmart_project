@@ -1,5 +1,6 @@
 import pandas as pd
-import numpy as np
+import sys,os
+sys.path.append(os.path.join(os.path.dirname(os.curdir)))
 from pandas.plotting import autocorrelation_plot
 from q01_preprocesssing.build import q01_preprocesssing
 
