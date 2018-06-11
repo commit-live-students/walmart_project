@@ -22,4 +22,4 @@
 
 | Return | dtype | description |
 | --- | --- | --- | 
-| df | Dataframe for Data; CSV acceptable by sklearn | X_train |
+| variable | Dataframe for Data; CSV acceptable by sklearn | dataframe |
