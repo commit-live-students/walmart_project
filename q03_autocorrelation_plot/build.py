@@ -9,9 +9,5 @@ df = q01_preprocesssing(train_df)
 
 df_mean = df.resample('W').mean()
 
-def q03_autocorrelation_plot(df):
+def q03_autocorrelation_plot():
     "write your solution here"
-    
-    plt.figure(figsize=(16, 7))
-    autocorrelation_plot(df['Weekly_Sales'])
-

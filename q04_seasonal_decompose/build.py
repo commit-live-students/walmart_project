@@ -13,29 +13,7 @@ df_mean = df.resample('W').mean()
 
 
 
-def q04_seasonal_decompose(df):
+def q04_seasonal_decompose():
     "write your solution here"
-    decompose =  df['Weekly_Sales']
-    decomposition = seasonal_decompose(decompose)
-
-
-    trend = decomposition.trend
-    seasonal = decomposition.seasonal
-    residual = decomposition.resid
-    plt.figure(figsize=(16, 7))
-    plt.subplot(411)
-    plt.plot(df_mean['Weekly_Sales'], label='Original')
-    plt.legend(loc='best')
-    plt.subplot(412)
-    plt.plot(trend, label='Trend')
-    plt.legend(loc='best')
-    plt.subplot(413)
-    plt.plot(seasonal,label='Seasonality')
-    plt.legend(loc='best')
-    plt.subplot(414)
-    plt.plot(residual, label='Residuals')
-    plt.legend(loc='best')
-    plt.tight_layout()    
-
 
 

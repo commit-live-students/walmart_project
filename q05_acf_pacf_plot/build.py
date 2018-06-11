@@ -11,13 +11,7 @@ df = q01_preprocesssing(train_df)
 
 df_mean = df.resample('W').mean()
 
-def q05_acf_pacf_plot(df):
+def q05_acf_pacf_plot():
     "write your solution here"
-    series = pd.Series(df['Weekly_Sales'])
-    plt.figure(figsize=(20,8))
-    plt.subplot(211)
-    plot_acf(series, ax=plt.gca())
-    plt.subplot(212)
-    plot_pacf(series, ax=plt.gca())
-    plt.show()    
+
 
