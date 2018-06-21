@@ -4,7 +4,7 @@ import sys,os
 sys.path.append(os.path.join(os.path.dirname(os.curdir)))
 import matplotlib.pyplot as plt
 from  statsmodels.tsa.stattools import adfuller
-from q01_preprocesssing.build import q01_preprocesssing
+from greyatomlib.walmart_project.q01_preprocesssing.build import q01_preprocesssing
 
 train_df = pd.read_csv("data/train.csv")
 df = q01_preprocesssing(train_df)
