@@ -6,6 +6,7 @@ sys.path.append(os.path.join(os.path.dirname(os.curdir)))
 import matplotlib.pyplot as plt
 from  statsmodels.tsa.stattools import adfuller
 from greyatomlib.walmart_project.q01_preprocesssing.build import q01_preprocesssing
+plt.switch_backend('agg')
 
 train_df = pd.read_csv('data/train.csv')
 df = q01_preprocesssing(train_df)
@@ -26,7 +27,7 @@ def q02_test_stationarity(x=df_mean):
     plt.grid()
     plt.xticks(rotation=90)
     plt.locator_params(nbins=60, axis = 'x')
-    
+
     #Perform Dickey-Fuller test:
     print('Results of Dickey-Fuller Test:')
     tstest = adfuller(x['Weekly_Sales'], autolag='AIC')
@@ -34,8 +35,3 @@ def q02_test_stationarity(x=df_mean):
     for key, value in tstest[4].items():
         tsoutput['Critical Value (%s)' % key] = value
     return(tsoutput)
-
-q02_test_stationarity(x=df_mean)
-
-
-
