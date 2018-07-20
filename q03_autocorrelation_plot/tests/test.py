@@ -4,7 +4,7 @@ from ..build import q03_autocorrelation_plot
 from inspect import getfullargspec
 
 train_df = pd.read_csv("data/train.csv")
-from q01_preprocesssing.build import q01_preprocesssing
+from greyatomlib.walmart_project.q01_preprocesssing.build import q01_preprocesssing
 df = q01_preprocesssing(train_df)
 df_mean = df.resample('W').mean()
 
